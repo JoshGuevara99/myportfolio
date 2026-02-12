@@ -13,7 +13,7 @@ function Contact() {
   const [email, setEmail] = useState("")
   const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
-  const position = [37.32, -121.78]
+  const position = [40.77770, -73.92314]
 
 
 
@@ -23,7 +23,7 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_f9tjnqq', 'template_qfu1v2k', formRef.current, 'dNjN59-Qf2Of1aCXm')
+    emailjs.sendForm('service_f9tjnqq', 'template_qfu1v2k', formRef.current, 'yNVwHd3oJMUNRjj6a')
       .then((result) => {
         console.log(result.text);
 
