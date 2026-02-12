@@ -73,7 +73,7 @@ function Home() {
                 </h1>
 
 
-                <h2 className="title-container">Python Programmer / React Developer </h2>
+                <h2 className="title-container">Fullstack Developer</h2>
                 <Link to="/about" className="flat-button">About Me</Link>
 
             </div>
