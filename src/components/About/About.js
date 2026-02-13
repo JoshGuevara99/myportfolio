@@ -91,7 +91,7 @@ For the past two years, I’ve worked as a Software Engineer at Beast Code, a Fl
   <br/>
          <br/>
 
-Prior to this, I worked as a Software Engineer at Hurricane Electric, where I led the development of internal mathematical tooling. I designed and maintained a Node.js API that powered a React-based interface for interactive data visualization, strengthening my foundation in backend systems and API design.
+Prior to this, I worked as a Software Engineer at Hurricane Electric, where I led development of an internal mathematical tooling platform. I architected and maintained a Node.js API that integrated with external services and powered an interactive React-based data visualization interface, owning the system end-to-end.
   <br/>
          <br/>
 
