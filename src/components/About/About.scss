@@ -250,7 +250,19 @@ h1 {
 @media (max-width: 595px) {
     .about-container{
         margin-top: 10%;
+        height: auto;
     }
+
+    .paragraph-container {
+    min-height: 80vh;
+    width: 80%;
+    margin-left: 0px; 
+    margin-right: 100px;
+    overflow-x: auto;
+    overflow-y: scroll;
+    margin-bottom: 10rem;
+
+}
     .my-photo{
        
   
@@ -258,6 +270,18 @@ h1 {
         width: 152px;
         
 
+    }
+    .typescript-logo {
+    height: 60px;
+    width: 60px;
+    }
+    .babylon-logo{
+        height: 80px;
+        width: 80px;
+    }
+    .vue-logo{
+        height: 60px;
+        width: 60px;
     }
 
     .animation-container{
@@ -311,6 +335,14 @@ h1 {
         .face4 {
             transform: rotateY(-90deg) translateZ(50px);
         }
+
+        .face5 {
+        transform: rotateX(90deg) translateZ(50px);
+        }
+        .face6 {
+        transform: rotateX(-90deg) translateZ(50px);
+        }
+
         .js-icon{
             font-size: 60px;
         }
