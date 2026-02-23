@@ -246,6 +246,19 @@ h1 {
         }
 
     }
+    .typescript-logo{
+        width:100px;
+        height: 100px;
+    }
+    .vue-logo{
+        width:80px;
+        height: 80px;
+    }
+    .babylon-logo{
+      
+        height: 130px;
+          width:160px;
+    }
 }
 @media (max-width: 595px) {
     .about-container{
@@ -277,7 +290,7 @@ h1 {
     }
     .babylon-logo{
         height: 80px;
-        width: 80px;
+        width: 100px;
     }
     .vue-logo{
         height: 60px;
