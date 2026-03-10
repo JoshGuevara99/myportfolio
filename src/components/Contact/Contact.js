@@ -112,7 +112,7 @@ function Contact() {
           <br />
           United States,
           <br />
-          San Jose, CA
+          New York City, New York
           <br />
           <span>
             joshua.guevara124@gmail.com
