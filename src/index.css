@@ -1,16 +1,36 @@
-html{
-  font-size:62.5%
+:root {
+  --bg: #06060c;
+  --bg-2: #0f0f1c;
+  --purple: #9b5de5;
+  --cyan: #00d4ff;
+  --pink: #f72585;
+  --text: #f0f0f5;
+  --muted: #5a5a72;
+  --border: rgba(255, 255, 255, 0.07);
+  --card: rgba(255, 255, 255, 0.04);
+  --gradient: linear-gradient(135deg, #9b5de5, #00d4ff);
+  --gradient-warm: linear-gradient(135deg, #f72585, #9b5de5);
+  --nav-height: 70px;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html {
+  font-size: 62.5%;
+}
 
 body {
   margin: 0;
-  font:300 11px/1.4 'Helvetica Neue','sans-serif';
-  color:#444;
-  background:#022c43;
-  overflow:hidden;
-  display: block;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--bg);
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

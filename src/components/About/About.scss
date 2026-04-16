@@ -1,412 +1,315 @@
+.about-page {
+  min-height: calc(100vh - var(--nav-height));
+  padding: 60px 8% 80px;
+  position: relative;
 
-
-.about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 180px;
-    margin-top: 60px;
-    height: 100vh;
-    width: 90%;
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(247, 37, 133, 0.07) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
-.content-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-
+/* ── Header ───────────────────────────────────────────── */
+.about-hero {
+  margin-bottom: 56px;
+  position: relative;
+  z-index: 1;
 }
 
-.my-photo {
-    max-height: 340px;
-    max-width: 300px;
-    height: 80%;
-    width: 80%;
-    margin-right: 8vw;
-    border-radius: 4px;
-
+.about-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(4rem, 6vw, 6.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  background: linear-gradient(135deg, #f0f0f5 20%, #9b5de5 60%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
 }
 
-.text-zone,
-h1 {
-    color: #ffd700;
-    font-size: 37px;
-    margin-left: 0px; 
-    font-family: 'Coolvetica';
+.about-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  color: var(--muted);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* ── Two-column body ──────────────────────────────────── */
+.about-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 56px;
+  position: relative;
+  z-index: 1;
+  align-items: start;
+}
+
+/* ── Left column ──────────────────────────────────────── */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: sticky;
+  top: 24px;
+}
+
+.photo-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-height: 360px;
+
+  .my-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    filter: brightness(0.9) contrast(1.05);
+    transition: filter 0.3s;
+  }
+
+  &:hover .my-photo {
+    filter: brightness(1) contrast(1.05);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 1px solid rgba(155, 93, 229, 0.25);
+    pointer-events: none;
+  }
+}
+
+.photo-glow {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 80px;
+  background: radial-gradient(ellipse, rgba(155, 93, 229, 0.35) 0%, transparent 70%);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  letter-spacing: 0.02em;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    border-color: rgba(155, 93, 229, 0.4);
+    background: rgba(155, 93, 229, 0.08);
+  }
+}
+
+/* ── Right column ─────────────────────────────────────── */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bio-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.55rem;
     font-weight: 400;
+    color: #b0b0c8;
+    line-height: 1.75;
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+  }
+
+  .bio-hobbies {
+    font-size: 1.4rem;
+    color: var(--muted);
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+}
+
+/* ── Cube section ─────────────────────────────────────── */
+.cube-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 0;
+}
+
+.cube-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  color: var(--muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .animation-container {
-    margin-left: 40%; 
-    padding: 30px;
-    margin-bottom: 200px;
+  perspective: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
 }
-
-.paragraph-container {
-    min-height: 80vh;
-    width: 80%;
-    margin-left: 0px; 
-    margin-right: 100px;
-    overflow-x: auto;
-    overflow-y: scroll;
-
-}
-
-.paragraph {
-    font-size: 140%;
-    color: white;
-}
-
-.python-logo {
-    height: 120px;
-    width: 120px;
-}
-.typescript-logo {
-    height: 120px;
-    width: 120px;
-}
-
-
-
-.text-animate-hover {
-    min-width: 10px;
-    display: inline-block;
-    animation-fill-mode: both;
-
-    &:hover {
-        animation: rubberBand 1s;
-        color: #ffd700;
-    }
-}
-
 
 .logo-spinner {
-    animation-name: spinlogo;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-    transform-style: preserve-3d;
-    transform-origin: 100px 100px 0;
+  animation: spinlogo 10s ease-in-out infinite;
+  transform-style: preserve-3d;
+  transform-origin: 100px 100px 0;
+  position: relative;
+  width: 200px;
+  height: 200px;
 
-    div {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        border: 1px solid #ccc;
-        background: rgba(255, 255, 255, 0.4);
-        font-size: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 0 10px 0px lightyellow;
+  div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(155, 93, 229, 0.3);
+    background: rgba(15, 15, 28, 0.85);
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(155, 93, 229, 0.15) inset;
+    backdrop-filter: blur(4px);
+  }
 
-    }
-
-    .face1 {
-        transform: translateZ(100px);
-
-    }
-
-    .face2 {
-        transform: rotateY(90deg) translateZ(100px);
-
-    }
-
-    .face3 {
-        transform: rotateY(180deg) translateZ(100px);
-
-
-    }
-
-    .face4 {
-        transform: rotateY(-90deg) translateZ(100px);
-    }
-    .face5 {
-        transform: rotateX(90deg) translateZ(70px);
-    }
-    .face6 {
-        transform: rotateX(-90deg) translateZ(70px);
-
-    }
-
-
-
+  .face1 { transform: translateZ(100px); }
+  .face2 { transform: rotateY(90deg) translateZ(100px); }
+  .face3 { transform: rotateY(180deg) translateZ(100px); }
+  .face4 { transform: rotateY(-90deg) translateZ(100px); }
+  .face5 { transform: rotateX(90deg) translateZ(70px); }
+  .face6 { transform: rotateX(-90deg) translateZ(70px); }
 }
 
-
-
+.python-logo    { height: 110px; width: 110px; }
+.typescript-logo { height: 110px; width: 110px; }
+.vue-logo       { width: 90px; height: 90px; }
+.babylon-logo   { width: 155px; height: 120px; }
+.node-icon      { font-size: 90px !important; }
+.react-icon     { font-size: 90px !important; }
 
 @keyframes spinlogo {
-    from,
-
-    to {
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-
-    }
-
-    14% {
-        transform: rotateY(90deg);
-    }
-
-    28% {
-        transform: rotateY(180deg)
-    }
-
-    42% {
-        transform: rotateY(270deg)
-    }
-
-    56% {
-        transform: rotateY(360deg)
-    }
-    70% {
-        transform: rotateX(-90deg)
-    }
-    84% {
-        transform: rotateX(90deg)
-    }
-    100%{
-        transform: rotateX(0deg)
-    }
+  from, to { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  14%  { transform: rotateY(90deg); }
+  28%  { transform: rotateY(180deg); }
+  42%  { transform: rotateY(270deg); }
+  56%  { transform: rotateY(360deg); }
+  70%  { transform: rotateX(-90deg); }
+  84%  { transform: rotateX(90deg); }
+  100% { transform: rotateX(0deg); }
 }
 
+/* ── Text animation helpers ───────────────────────────── */
+.text-animate-hover {
+  min-width: 10px;
+  display: inline-block;
+  animation-fill-mode: both;
 
-
-.vue-logo{
-    width: 100px;
-    height: 100px;
-}
-.babylon-logo{
-    width: 170px;
-    height: 140px;
-}
-@media(max-width:900px){
-    .about-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 10%;
-        margin-top: 60px;
-        height: 100vh;
-        width: 90%;
-    }
+  &:hover {
+    animation: rubberBand 1s;
+    color: var(--purple);
+  }
 }
 
-@media (max-width: 850px) {
-
-    .animation-container{
-        margin-top: 50px;
-        margin-left: 20%;
-    }
-    
-
-    .logo-spinner {
-        animation-name: spinlogo;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-duration: 8s;
-        transform-style: preserve-3d;
-        transform-origin: 70px 70px 0;
-
-        div {
-            position: absolute;
-            width: 140px;
-            height: 140px;
-            border: 1px solid #ccc;
-            background: rgba(255, 255, 255, 0.4);
-            font-size: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 10px 0px lightyellow;
-
-        }
-
-        .face1 {
-            transform: translateZ(70px);
-
-        }
-
-        .face2 {
-            transform: rotateY(90deg) translateZ(70px);
-
-        }
-
-        .face3 {
-            transform: rotateY(180deg) translateZ(70px);
-
-
-        }
-
-        .face4 {
-            transform: rotateY(-90deg) translateZ(70px);
-
-
-        }
-
-    }
-    .typescript-logo{
-        width:100px;
-        height: 100px;
-    }
-    .vue-logo{
-        width:80px;
-        height: 80px;
-    }
-    .babylon-logo{
-      
-        height: 130px;
-          width:160px;
-    }
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .about-body {
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+  }
 }
-@media (max-width: 595px) {
-    .about-container{
-        margin-top: 10%;
-        height: auto;
-    }
 
-    .paragraph-container {
-    min-height: 80vh;
-    width: 80%;
-    margin-left: 0px; 
-    margin-right: 100px;
-    overflow-x: auto;
-    overflow-y: scroll;
-    margin-bottom: 10rem;
+@media (max-width: 768px) {
+  .about-page {
+    padding: 40px 5% 60px;
+  }
 
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-left {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .photo-frame {
+    width: 160px;
+    max-height: 213px;
+    flex-shrink: 0;
+  }
+
+  .skill-tags {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .bio-card {
+    padding: 24px;
+  }
 }
-    .my-photo{
-       
-  
-        height: 152px;
-        width: 152px;
-        
 
+@media (max-width: 480px) {
+  .about-left {
+    flex-direction: column;
+  }
+
+  .photo-frame {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .bio-card {
+    padding: 20px;
+
+    p {
+      font-size: 1.45rem;
     }
-    .typescript-logo {
-    height: 60px;
-    width: 60px;
-    }
-    .babylon-logo{
-        height: 80px;
-        width: 100px;
-    }
-    .vue-logo{
-        height: 60px;
-        width: 60px;
-    }
-
-    .animation-container{
-        margin-top: 80px;
-        margin-left: 3%;
-    }
-    
-    .content-container{
-        margin-top: -20% ;
-        margin-bottom: -10%;
-    }
-
-    .logo-spinner {
-        animation-name: spinlogo;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-duration: 8s;
-        transform-style: preserve-3d;
-        transform-origin: 50px 50px 0;
-
-        div {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border: 1px solid #ccc;
-            background: rgba(255, 255, 255, 0.4);
-            font-size: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 10px 0px lightyellow;
-
-        }
-
-        .face1 {
-            transform: translateZ(50px);
-
-        }
-
-        .face2 {
-            transform: rotateY(90deg) translateZ(50px);
-
-        }
-
-        .face3 {
-            transform: rotateY(180deg) translateZ(50px);
-
-
-        }
-
-        .face4 {
-            transform: rotateY(-90deg) translateZ(50px);
-        }
-
-        .face5 {
-        transform: rotateX(90deg) translateZ(50px);
-        }
-        .face6 {
-        transform: rotateX(-90deg) translateZ(50px);
-        }
-
-        .js-icon{
-            font-size: 60px;
-        }
-    
-        .node-icon{
-            font-size: 60px;
-        }
-    
-        .react-icon{
-            font-size: 60px;
-        }
-
-    
-        .python-logo {
-            height: 60px;
-            width: 60px;
-        }
-        
-
-    }
-}
-//    .babylon-logo {
-//             height: 60px;
-//             width: 60px;
-//     }
-
-
-@media (max-width: 450px) {
-    .my-photo{
-       
-  
-        height: 132px;
-        width: 120px;
-        
-
-    }
- 
-    .text-zone{
-        font-size: 27px;
-        
-    }
-
-    .animation-container{
-        margin-top: 80px;
-        margin-left: -10%;
-    }
-    
-    .content-container{
-        margin-top: -20% ;
-        margin-bottom: -20%;
-    }
-
-  
+  }
 }
