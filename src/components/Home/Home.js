@@ -19,7 +19,7 @@ const skills = [
 const projects = [
   {
     title: 'On Deck',
-    description: 'AI-powered event discovery platform connecting performers to open mics, jam sessions, and performing communities nearby. Uses a tiered scraping pipeline ranging from iCal feeds and structured HTML to headless browsing and Gemini Flash Vision to automatically populate a PostgreSQL-backed feed with real, local events.',
+    description: 'As a traveling musician, I never had a simple way to find places to perform in new cities. Event listings were scattered across different sites and formats, with no single app to surface nearby opportunities. So I built one. On Deck is an AI-powered event discovery platform that connects performers with open mics, jam sessions, and local music communities. It uses a tiered scraping pipeline—from iCal feeds and structured HTML to headless browsing and Gemini Flash Vision—to automatically populate a PostgreSQL-backed feed with real, local events.',
     tech: ['TypeScript', 'Node.js', 'Zod', 'Railway', 'PostgreSQL', 'Vercel'],
     gradient: 'linear-gradient(135deg, #00d4ff 0%, #9b5de5 100%)',
     tag: 'Personal',
@@ -56,7 +56,7 @@ function Home() {
   const mapPos     = [40.7777, -73.9231]
 
   useEffect(() => {
-    const id = setTimeout(() => setLetterClass('text-animate-hover'), 4000)
+    const id = setTimeout(() => setLetterClass('text-animate-hover'), 3600)
     return () => clearTimeout(id)
   }, [])
 
