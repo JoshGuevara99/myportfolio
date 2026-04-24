@@ -1,24 +1,16 @@
-import './App.scss';
-import {Routes,Route} from 'react-router-dom'
+import './App.scss'
+import { Route, Routes } from 'react-router-dom'
 import Layout from './components/layout/Layout'
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
-import Resume from './components/Resume/Resume';
+import Home from './components/Home/Home'
 
 function App() {
   return (
-   <Routes>
-    <Route path='/' element={<Layout/>}>
-      <Route index element={<Home/>}/>
-      <Route path='/about' element = {<About/>}/>
-      <Route path='/contact' element = {<Contact/>}/>
-      <Route path='/resume' element = {<Resume/>}/>
-
-
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
       </Route>
-   </Routes>
-  );
+    </Routes>
+  )
 }
 
-export default App;
+export default App

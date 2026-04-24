@@ -1,19 +1,22 @@
 import React from 'react'
 import './Sidebar.scss'
-import { Link, NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+
+const scrollTo = (id) =>
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
 export default function Sidebar() {
   return (
     <header className='navbar'>
-      <Link to='/' className='navbar-logo'>JG</Link>
+      <button className='navbar-logo' onClick={() => scrollTo('hero')}>JG</button>
 
       <nav className='navbar-links'>
-        <NavLink end to='/'>Home</NavLink>
-        <NavLink to='/about'>About</NavLink>
-        <NavLink to='/contact'>Contact</NavLink>
-        <NavLink to='/resume'>Resume</NavLink>
+        <button onClick={() => scrollTo('hero')}>Home</button>
+        <button onClick={() => scrollTo('about')}>About</button>
+        <button onClick={() => scrollTo('projects')}>Projects</button>
+        <button onClick={() => scrollTo('contact')}>Contact</button>
+        <button onClick={() => scrollTo('resume')}>Resume</button>
       </nav>
 
       <div className='navbar-social'>

@@ -9,7 +9,7 @@ function Resume() {
         <h1 className='resume-title'>Resume</h1>
         <a
           className='download-btn'
-          href={`${process.env.PUBLIC_URL}/Resume_2_26.pdf`}
+          href={`${process.env.PUBLIC_URL}/Resume_4_26.pdf`}
           download='Joshua_Guevara_Resume.pdf'
         >
           Download PDF
@@ -19,12 +19,12 @@ function Resume() {
       <div className='resume-content'>
         <iframe
           className='resume-iframe'
-          src={`${process.env.PUBLIC_URL}/Resume_2_26.pdf#toolbar=0&navpanes=0&scrollbar=0`}
+          src={`${process.env.PUBLIC_URL}/Resume_4_26.pdf#toolbar=0&navpanes=0&scrollbar=0`}
           title='Joshua Guevara Resume'
         />
         <a
           className='resume-img-link'
-          href={`${process.env.PUBLIC_URL}/Resume_2_26.pdf`}
+          href={`${process.env.PUBLIC_URL}/Resume_4_26.pdf`}
           target='_blank'
           rel='noreferrer'
         >

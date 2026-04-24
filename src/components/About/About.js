@@ -1,27 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './About.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNode, faReact } from '@fortawesome/free-brands-svg-icons'
-import pythonLogo from '../../assets/images/python-logo.png'
+import pythonLogo    from '../../assets/images/python-logo.png'
 import typescriptLogo from '../../assets/images/ts-logo-256.png'
-import vueLogo from '../../assets/images/vue-logo.png'
-import babylonLogo from '../../assets/images/babylon-logo.png'
-import photo from '../../assets/images/Photo.jpeg'
-
-const skills = [
-  'TypeScript', 'Vue.js', 'React', 'Node.js',
-  'Python', 'C#', 'BabylonJS', 'Kubernetes',
-  'Docker', 'CI/CD', 'Linear Algebra', 'REST APIs'
-]
+import vueLogo       from '../../assets/images/vue-logo.png'
+import babylonLogo   from '../../assets/images/babylon-logo.png'
+import photo         from '../../assets/images/Photo.jpeg'
 
 function About() {
-  const [letterClass, setLetterClass] = useState('text-animate')
-
-  useEffect(() => {
-    const id = setTimeout(() => setLetterClass('text-animate-hover'), 4000)
-    return () => clearTimeout(id)
-  }, [])
-
   return (
     <div className='about-page'>
 
@@ -32,38 +19,48 @@ function About() {
 
       <div className='about-body'>
 
+        {/* ── Left: photo + cube ────────────────────── */}
         <div className='about-left'>
           <div className='photo-frame'>
             <img className='my-photo' src={photo} alt='Joshua Guevara' />
             <div className='photo-glow' />
           </div>
 
-          <div className='skill-tags'>
-            {skills.map(s => (
-              <span key={s} className='skill-tag'>{s}</span>
-            ))}
+          <div className='cube-section'>
+            <p className='cube-label'>Tech Stack</p>
+            <div className='animation-container'>
+              <div className='logo-spinner'>
+                <div className='face1'><img className='python-logo'     src={pythonLogo}     alt='Python' /></div>
+                <div className='face4'><img className='typescript-logo' src={typescriptLogo} alt='TypeScript' /></div>
+                <div className='face3'><img className='vue-logo'        src={vueLogo}        alt='Vue' /></div>
+                <div className='face2'><FontAwesomeIcon className='node-icon'  icon={faNode}  color='#3c873a' /></div>
+                <div className='face5'><FontAwesomeIcon className='react-icon' icon={faReact} color='#61dafb' /></div>
+                <div className='face6'><img className='babylon-logo'    src={babylonLogo}    alt='BabylonJS' /></div>
+              </div>
+            </div>
           </div>
         </div>
 
+        {/* ── Right: bio + skills ───────────────────── */}
         <div className='about-right'>
           <div className='bio-card'>
             <p>
-              Hello! I'm <strong>Joshua Guevara</strong> — you can call me Josh. I'm a Software Engineer originally from the Bay Area,
-              California, now based in <strong>New York City</strong>.
+              Hello! I'm Joshua Guevara — you can call me Josh. I'm a Software Engineer originally from
+              the Bay Area, California, now based in New York City.
             </p>
             <p>
-              I graduated from <strong>San José State University</strong> in May 2022 with a degree in
+              I graduated from San José State University in May 2022 with a degree in
               Applied Computational Mathematics and a minor in Computer Science.
             </p>
             <p>
-              For the past two years I've worked as a Software Engineer at <strong>Beast Code</strong>, a Florida-based defense
+              For the past two years I've worked as a Software Engineer at Beast Code, a Florida-based defense
               contractor, building production-grade 3D digital twin software. I develop and maintain a complex,
               interactive full-stack application built with TypeScript, Vue, and C# in a Kubernetes-managed,
               cloud-native environment — from scaling frontend architecture to applying linear algebra to model
               real-world platforms in 3D space.
             </p>
             <p>
-              Prior to that I was at <strong>Hurricane Electric</strong>, where I led development of an internal mathematical
+              Prior to that I was at Hurricane Electric, where I led development of an internal mathematical
               tooling platform — architecting a Node.js API that powered an interactive React data visualization
               interface, end-to-end.
             </p>
@@ -76,31 +73,6 @@ function About() {
             </p>
           </div>
 
-          <div className='cube-section'>
-            <p className='cube-label'>Tech Stack</p>
-            <div className='animation-container'>
-              <div className='logo-spinner'>
-                <div className='face1'>
-                  <img className='python-logo' src={pythonLogo} alt='Python' />
-                </div>
-                <div className='face4'>
-                  <img className='typescript-logo' src={typescriptLogo} alt='TypeScript' />
-                </div>
-                <div className='face3'>
-                  <img className='vue-logo' src={vueLogo} alt='Vue' />
-                </div>
-                <div className='face2'>
-                  <FontAwesomeIcon className='node-icon' icon={faNode} color='#3c873a' />
-                </div>
-                <div className='face5'>
-                  <FontAwesomeIcon className='react-icon' icon={faReact} color='#61dafb' />
-                </div>
-                <div className='face6'>
-                  <img className='babylon-logo' src={babylonLogo} alt='BabylonJS' />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
