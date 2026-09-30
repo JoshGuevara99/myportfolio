@@ -271,14 +271,14 @@ function Home() {
         <div className='resume-actions'>
           <a
             className='cta-primary'
-            href={`${process.env.PUBLIC_URL}/Resume_4_26.pdf`}
+            href={`${process.env.PUBLIC_URL}/Resume_9_26.pdf`}
             download='Joshua_Guevara_Resume.pdf'
           >
             Download PDF ↓
           </a>
           <a
             className='cta-secondary'
-            href={`${process.env.PUBLIC_URL}/Resume_4_26.pdf`}
+            href={`${process.env.PUBLIC_URL}/Resume_9_26.pdf`}
             target='_blank'
             rel='noreferrer'
           >
@@ -289,12 +289,12 @@ function Home() {
         <div className='resume-viewer'>
           <iframe
             className='resume-iframe'
-            src={`${process.env.PUBLIC_URL}/Resume_4_26.pdf#toolbar=0&navpanes=0&scrollbar=0`}
+            src={`${process.env.PUBLIC_URL}/Resume_9_26.pdf#toolbar=0&navpanes=0&scrollbar=0`}
             title='Joshua Guevara Resume'
           />
           <a
             className='resume-preview-link'
-            href={`${process.env.PUBLIC_URL}/Resume_4_26.pdf`}
+            href={`${process.env.PUBLIC_URL}/Resume_9_26.pdf`}
             target='_blank'
             rel='noreferrer'
           >
