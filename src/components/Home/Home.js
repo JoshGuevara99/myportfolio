@@ -26,9 +26,9 @@ const projects = [
     live: 'https://on-deck-api.vercel.app/',
   },
   {
-    title: '3D Digital Twin Platform',
-    description: 'Production-grade 3D visualization software modeling real-world platforms in a cloud-native Kubernetes environment. Built at Beast Code for defense applications — scaling frontend architecture and applying linear algebra for accurate 3D spatial modeling.',
-    tech: ['TypeScript','Vue.js','C#','BabylonJS','Kubernetes','Docker'],
+    title: 'Distributed Fault Notification Dashboard & 3D Visualization Platform',
+    description: 'Production software for monitoring system faults and visualizing affected hardware in 3D. Built at Beast Code for defense applications, contributing across Vue and .NET services within a distributed system that integrates fault-management APIs with interactive 3D visualization.',
+    tech: ['TypeScript','Vue.js','C#','Babylon.js','Kubernetes','Docker', '.NET'],
     gradient: 'linear-gradient(135deg, #9b5de5 0%, #f72585 100%)',
     tag: 'Professional',
   },
@@ -138,9 +138,9 @@ function Home() {
             <div className='bio-card'>
               <p>Hello! I'm Joshua Guevara — you can call me Josh. I'm a Software Engineer originally from the Bay Area, California, now based in New York City.</p>
               <p>I graduated from San José State University in May 2022 with a degree in Applied Computational Mathematics and a minor in Computer Science.</p>
-              <p>For the past two years I've worked as a Software Engineer at Beast Code, a Florida-based defense contractor, building production-grade 3D digital twin software. I develop and maintain a complex, interactive full-stack application built with TypeScript, Vue, and C# in a Kubernetes-managed, cloud-native environment — from scaling frontend architecture to applying linear algebra to model real-world platforms in 3D space.</p>
-              <p>Prior to that I was at Hurricane Electric, where I led development of an internal mathematical tooling platform — architecting a Node.js API that powered an interactive React data visualization interface, end-to-end.</p>
-              <p>I'm currently seeking new opportunities where I can apply my full-stack experience and mathematical background to build scalable, technically rigorous systems with real-world impact.</p>
+              <p>Since 2023, I've worked as a Software Engineer at Beast Code, a Florida-based defense contractor, building production-grade software for defense applications. I work across TypeScript, Vue, and C# in a Kubernetes-managed, cloud-native environment, contributing to interactive 3D visualization, frontend architecture, backend services, and distributed-system integrations. Most recently, I helped deliver an MVP for monitoring system faults and visualizing affected hardware in 3D, building .NET services that integrate with existing fault-management systems and developing the visualization pipeline that translates fault data into component-specific 3D responses.</p>
+              <p>Prior to that, I was at Hurricane Electric, where I led development of an internal mathematical tooling platform, building a Node.js API and interactive React interface to validate the company's mathematical engine against established computational tools.</p>
+              <p>I'm currently seeking new opportunities where I can combine my software engineering experience and mathematical background to build technically challenging systems with real-world impact.</p>
               <p className='bio-hobbies'>Outside of engineering: guitar in my band, lifting, chess, history.</p>
             </div>
           </div>
