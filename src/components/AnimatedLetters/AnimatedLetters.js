@@ -8,7 +8,7 @@ function AnimatedLetters({letterClass,strArray,index}) {
     {
         strArray.map((char,i)=>
             <span key={char+i} className={`${letterClass} _${i + index}`}> 
-                {char}
+                {char === ' ' ? '\u00A0' : char}
             </span>
         )
     }
